@@ -41,14 +41,12 @@ class Board extends Component {
             hasWon: false,
             board: this.createBoard(),
         };
-
-        // TODO: set initial state
     }
 
     /** create a board nrows high/ncols wide, each cell randomly lit or unlit */
     createBoard() {
         let board = [];
-        // TODO: create array-of-arrays of true/false values
+        //* create array-of-arrays of true/false values
         for (let y = 0; y < this.props.nrows; y++) {
             let row = [];
             for (let x = 0; x < this.props.ncols; x++) {
@@ -61,7 +59,6 @@ class Board extends Component {
     }
 
     /** handle changing a cell: update board & determine if winner */
-
     flipCellsAround(coord) {
         console.log("Flipping", coord);
         let { ncols, nrows } = this.props;
